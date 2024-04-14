@@ -1,12 +1,12 @@
 #! /usr/bin/env node
-// Above line is callled "shabang" : SHA is use for hash (#) and BANG is use for exclamation mark(!)
+// The line above is called a "shebang": "she" stands for sharp (#) and "bang" represents the exclamation mark (!)
 
 import inquirer from "inquirer";
 const answer = await inquirer.prompt([
   { message: "Enter First number", type: "number", name: "firstNumber" },
   { message: "Enter Second number", type: "number", name: "secondNumber" },
   {
-    message: "Select One of the operator to perform operation",
+    message: "Select one of the operators to perform the operation",
     type: "list",
     name: "Operator",
     choices: [
@@ -14,12 +14,12 @@ const answer = await inquirer.prompt([
       "Subtraction",
       "Multiplication",
       "Division",
-      "Module",
+      "Modulus",
     ],
   },
 ]);
 
-// conditional staement
+// Conditional statement
 if (answer.Operator === "Addition") {
   console.log(`Your value is`, answer.firstNumber + answer.secondNumber);
 } else if (answer.Operator === "Subtraction") {
@@ -28,7 +28,7 @@ if (answer.Operator === "Addition") {
   console.log(`Your value is`, answer.firstNumber * answer.secondNumber);
 } else if (answer.Operator === "Division") {
   console.log(`Your value is`, answer.firstNumber / answer.secondNumber);
-} else if (answer.Operator === "Module") {
+} else if (answer.Operator === "Modulus") {
   console.log(`Your value is`, answer.firstNumber % answer.secondNumber);
 } else {
   console.log("Please choose a valid operator");
