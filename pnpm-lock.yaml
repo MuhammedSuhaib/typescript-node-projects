@@ -8,10 +8,28 @@ importers:
 
   .:
     dependencies:
+      chalk:
+        specifier: ^5.6.2
+        version: 5.6.2
+      chalk-animation:
+        specifier: ^2.0.3
+        version: 2.0.3
+      figlet:
+        specifier: ^1.11.0
+        version: 1.11.0
       inquirer:
         specifier: ^9.3.8
         version: 9.3.8(@types/node@25.9.1)
+      node-banner:
+        specifier: ^1.4.0
+        version: 1.4.0
     devDependencies:
+      '@types/chalk-animation':
+        specifier: ^1.6.3
+        version: 1.6.3
+      '@types/figlet':
+        specifier: ^1.7.0
+        version: 1.7.0
       '@types/inquirer':
         specifier: ^9.0.9
         version: 9.0.9

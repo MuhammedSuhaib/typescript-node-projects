@@ -2,34 +2,46 @@
 // The line above is called a "shebang": "she" stands for sharp (#) and "bang" represents the exclamation mark (!)
 
 import inquirer from "inquirer";
-const answer = await inquirer.prompt([
-  { message: "Enter First number", type: "number", name: "firstNumber" },
-  { message: "Enter Second number", type: "number", name: "secondNumber" },
-  {
-    message: "Select one of the operators to perform the operation",
-    type: "list",
-    name: "Operator",
-    choices: [
-      "Addition",
-      "Subtraction",
-      "Multiplication",
-      "Division",
-      "Modulus",
-    ],
-  },
-]);
+import chalk from "chalk";
+import showBanner from "node-banner";
+import chalkAnimation from 'chalk-animation';
 
-// Conditional statement
-if (answer.Operator === "Addition") {
-  console.log(`Your value is`, answer.firstNumber + answer.secondNumber);
-} else if (answer.Operator === "Subtraction") {
-  console.log(`Your value is`, answer.firstNumber - answer.secondNumber);
-} else if (answer.Operator === "Multiplication") {
-  console.log(`Your value is`, answer.firstNumber * answer.secondNumber);
-} else if (answer.Operator === "Division") {
-  console.log(`Your value is`, answer.firstNumber / answer.secondNumber);
-} else if (answer.Operator === "Modulus") {
-  console.log(`Your value is`, answer.firstNumber % answer.secondNumber);
-} else {
-  console.log("Please choose a valid operator");
-}
+(async () => {
+    await showBanner('C L I Calculator ', '', 'blue');
+    const answer = await inquirer.prompt([
+        { message: chalk.greenBright("Enter First number"),
+            type: "number",
+            name: "firstNumber" },
+        { message: chalk.magentaBright("Enter Second number"),
+            type: "number",
+            name: "secondNumber" },
+        { message: chalk.yellowBright("Select one operator to perform operation"),
+            type: "list",
+            name: "operator",
+            choices: ["Addition", "Subtraction", "Multiplication", "Division", "Modulus"] },
+    ]);
+    // conditional statement
+    if (answer.operator === "Addition") {
+        console.log('Your value is', answer.firstNumber + answer.secondNumber);
+    }
+    else if (answer.operator === "Subtraction") {
+        console.log('Your value is', answer.firstNumber - answer.secondNumber);
+    }
+    else if (answer.operator === "Multiplication") {
+        console.log('Your value is', answer.firstNumber * answer.secondNumber);
+    }
+    else if (answer.operator === "Division") {
+        console.log('Your value is', answer.firstNumber / answer.secondNumber);
+    }
+    else if (answer.operator === "Modulus") {
+        console.log('Your value is', answer.firstNumber % answer.secondNumber);
+    }
+    else {
+        console.log("Invalid input");
+    }
+    console.log();
+    let animation = chalkAnimation.rainbow("Thanks for using my Calculator");
+    setTimeout(() => {
+        animation.stop(); // Stop the animation
+    }, 2000);
+})();
