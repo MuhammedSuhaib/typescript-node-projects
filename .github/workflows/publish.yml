@@ -35,7 +35,7 @@ jobs:
           for pkg in calculator atm todo-list currency-converter word-counter student-management-system adventure-game quiz countdown-timer number-guessing-game oop oop-mybank; do
             cat > dist/$pkg/package.json <<EOF
           {
-            "name": "muhammed_suhaib/$pkg",
+            "name": "@muhammed_suhaib/$pkg",
             "version": "1.0.0",
             "main": "index.js"
           }
