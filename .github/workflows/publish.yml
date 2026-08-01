@@ -36,7 +36,7 @@ jobs:
             cat > dist/$pkg/package.json <<EOF
           {
             "name": "@muhammed_suhaib/$pkg",
-            "version": "1.0.0",
+            "version": "1.0.${{ github.run_number }}",
             "main": "index.js"
           }
           EOF
@@ -48,7 +48,7 @@ jobs:
             cat > package.json <<EOF
           {
             "name": "@muhammedsuhaib/$pkg",
-            "version": "1.0.0",
+            "version": "1.0.${{ github.run_number }}",
             "main": "index.js"
           }
           EOF
