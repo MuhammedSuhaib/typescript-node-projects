@@ -56,4 +56,5 @@ jobs:
             pnpm publish --registry=https://npm.pkg.github.com --no-git-checks
 
             cd ../..
+            sleep 5
           done
