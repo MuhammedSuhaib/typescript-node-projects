@@ -21,6 +21,7 @@
     "quiz/**/*.ts",
     "student-management-system/**/*.ts",
     "todo-list/**/*.ts",
-    "word-counter/**/*.ts"
+    "word-counter/**/*.ts",
+    "ghost/**/*.ts"
   ]
 }

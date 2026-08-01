@@ -17,12 +17,12 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
 
       - name: Install pnpm
         uses: pnpm/action-setup@v3
         with:
-          version: 8
+          version: 11
 
       - name: Install Dependencies
         run: pnpm install
@@ -32,7 +32,7 @@ jobs:
 
       - name: Publish to both registries
         run: |
-          for pkg in calculator atm todo-list currency-converter word-counter student-management-system adventure-game quiz countdown-timer number-guessing-game oop oop-mybank; do
+          for pkg in calculator atm todo-list currency-converter word-counter student-management-system adventure-game quiz countdown-timer number-guessing-game oop oop-mybank ghost; do
             cat > dist/$pkg/package.json <<EOF
           {
             "name": "@muhammed_suhaib/$pkg",
@@ -56,5 +56,5 @@ jobs:
             pnpm publish --registry=https://npm.pkg.github.com --no-git-checks
 
             cd ../..
-            sleep 15
+            sleep 25
           done
