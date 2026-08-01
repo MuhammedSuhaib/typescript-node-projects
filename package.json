@@ -12,6 +12,9 @@
   "author": "Muhammed Suhaib",
   "license": "ISC",
   "packageManager": "pnpm@11.18.0",
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild"]
+  },
   "devDependencies": {
     "@types/chalk-animation": "^1.6.3",
     "@types/figlet": "^1.7.0",
