@@ -1,0 +1,46 @@
+name: Automated Multi-Registry Publish
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8
+
+      - name: Install Dependencies
+        run: pnpm install
+
+      - name: Build All Projects
+        run: pnpm --filter "./packages/**" build --if-present
+
+      - name: Authenticate & Publish to NPM
+        run: |
+          pnpm config set //registry.npmjs.org/:_authToken "${{ secrets.TYPESCRIPT_NODE_NPM }}"
+          pnpm -r publish --access public --no-git-checks
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.TYPESCRIPT_NODE_NPM }}
+
+      - name: Authenticate & Publish to GitHub Packages
+        run: |
+          pnpm config set //npm.pkg.github.com/:_authToken "${{ secrets.TYPESCRIPT_NODE_GITHUB_PAT }}"
+          pnpm config set registry https://npm.pkg.github.com/
+          pnpm -r publish --no-git-checks
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.TYPESCRIPT_NODE_GITHUB_PAT }}
