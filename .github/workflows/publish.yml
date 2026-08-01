@@ -37,7 +37,8 @@ jobs:
           {
             "name": "@muhammed_suhaib/$pkg",
             "version": "1.0.${{ github.run_number }}",
-            "main": "index.js"
+            "main": "index.js",
+            "bin": { "$pkg": "index.js" }
           }
           EOF
             cd dist/$pkg
@@ -49,7 +50,8 @@ jobs:
           {
             "name": "@muhammedsuhaib/$pkg",
             "version": "1.0.${{ github.run_number }}",
-            "main": "index.js"
+            "main": "index.js",
+            "bin": { "$pkg": "index.js" }
           }
           EOF
             pnpm config set //npm.pkg.github.com/:_authToken "${{ secrets.TYPESCRIPT_NODE_GITHUB_PAT }}"
