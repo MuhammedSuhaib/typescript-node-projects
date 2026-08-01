@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "outDir": "./dist"
+  },
+  "include": [
+    "adventure-game/**/*.ts",
+    "atm/**/*.ts",
+    "calculator/**/*.ts",
+    "countdown-timer/**/*.ts",
+    "currency-converter/**/*.ts",
+    "number-guessing-game/**/*.ts",
+    "oop/**/*.ts",
+    "oop-mybank/**/*.ts",
+    "quiz/**/*.ts",
+    "student-management-system/**/*.ts",
+    "todo-list/**/*.ts",
+    "word-counter/**/*.ts"
+  ]
+}
