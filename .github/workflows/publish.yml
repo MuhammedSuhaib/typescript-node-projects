@@ -45,6 +45,13 @@ jobs:
             pnpm config set //registry.npmjs.org/:_authToken "${{ secrets.TYPESCRIPT_NODE_NPM }}"
             pnpm publish --registry=https://registry.npmjs.org --access public --no-git-checks
 
+            cat > package.json <<EOF
+          {
+            "name": "@muhammedsuhaib/$pkg",
+            "version": "1.0.0",
+            "main": "index.js"
+          }
+          EOF
             pnpm config set //npm.pkg.github.com/:_authToken "${{ secrets.TYPESCRIPT_NODE_GITHUB_PAT }}"
             pnpm publish --registry=https://npm.pkg.github.com --no-git-checks
 
