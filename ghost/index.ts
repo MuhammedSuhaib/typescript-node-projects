@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 import chalk from "chalk";
-console.log(chalk.green(`\n                                          
+import chalkAnimation from "chalk-animation";
+
+const ghost = `\n                                          
                                   .:::::::::::::::::::::::::.                                                     
                                 :^.                         .:.                                     
                               ^^.                              ::                                   
@@ -25,7 +27,7 @@ console.log(chalk.green(`\n
                   :~                                                       .!                       
                    ^^                                                      ~.                       
                    ~^                                                      !                        
-                   ?                 >i love to ry new stuffs               7.                       
+                   ?                 >i love to try new stuffs              7.                       
                   .!                                                       :~                       
                   !:                                                        ?                       
                   J                                                         7.                      
@@ -39,4 +41,12 @@ console.log(chalk.green(`\n
               .^.  .......       ..:.                     ::..     ......     .^                    
                   .                  ::.               .::               .....                      
                                         .:..        .::.                                            
-                                           ..........                                          `));
+                                           ..........                                          `;
+(async () => {
+  const rainbow = chalkAnimation.rainbow(ghost);
+  
+  setTimeout(() => {
+    rainbow.stop();
+    console.log(chalk.magentaBright.bold("\n✨ Want your own custom ASCII art? Let's build it together → https://x.com/cuhaib1 ✨"));
+  }, 3000);
+})();
