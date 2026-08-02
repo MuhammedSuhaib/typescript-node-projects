@@ -30,3 +30,16 @@ pnpm dlx tsx number-guessing-game/index.ts
 ```
 
 *Note: Cheating is always possible!* 🤫
+
+## ▶️ Run Without Installation
+
+Try it directly in your terminal — no cloning or setup needed:
+
+```bash
+npx @muhammed_suhaib/number-guessing-game
+```
+or
+```bash
+pnpm dlx @muhammed_suhaib/number-guessing-game
+```
+

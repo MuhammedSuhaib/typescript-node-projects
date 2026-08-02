@@ -30,3 +30,16 @@ Or using `tsx`:
 pnpm dlx tsx adventure-game/index.ts
 ```
 
+
+## ▶️ Run Without Installation
+
+Try it directly in your terminal — no cloning or setup needed:
+
+```bash
+npx @muhammed_suhaib/adventure-game
+```
+or
+```bash
+pnpm dlx @muhammed_suhaib/adventure-game
+```
+

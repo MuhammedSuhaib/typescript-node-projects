@@ -27,3 +27,16 @@ Or using `tsx`:
 pnpm dlx tsx countdown-timer/index.ts
 ```
 
+
+## ▶️ Run Without Installation
+
+Try it directly in your terminal — no cloning or setup needed:
+
+```bash
+npx @muhammed_suhaib/countdown-timer
+```
+or
+```bash
+pnpm dlx @muhammed_suhaib/countdown-timer
+```
+

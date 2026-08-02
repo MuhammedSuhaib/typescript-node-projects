@@ -29,3 +29,15 @@ Or using `tsx`:
 ```bash
 pnpm dlx tsx atm/index.ts
 ```
+## ▶️ Run Without Installation
+
+Try it directly in your terminal — no cloning or setup needed:
+
+```bash
+npx @muhammed_suhaib/atm
+```
+or
+```bash
+pnpm dlx @muhammed_suhaib/atm
+```
+

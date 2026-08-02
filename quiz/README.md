@@ -29,3 +29,16 @@ Or using `tsx`:
 pnpm dlx tsx quiz/index.ts
 ```
 
+
+## ▶️ Run Without Installation
+
+Try it directly in your terminal — no cloning or setup needed:
+
+```bash
+npx @muhammed_suhaib/quiz
+```
+or
+```bash
+pnpm dlx @muhammed_suhaib/quiz
+```
+

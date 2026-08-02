@@ -28,3 +28,16 @@ Or using `tsx`:
 pnpm dlx tsx word-counter/index.ts
 ```
 
+
+## ▶️ Run Without Installation
+
+Try it directly in your terminal — no cloning or setup needed:
+
+```bash
+npx @muhammed_suhaib/word-counter
+```
+or
+```bash
+pnpm dlx @muhammed_suhaib/word-counter
+```
+

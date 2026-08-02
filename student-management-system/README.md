@@ -31,3 +31,16 @@ Or using `tsx`:
 pnpm dlx tsx student-management-system/index.ts
 ```
 
+
+## ▶️ Run Without Installation
+
+Try it directly in your terminal — no cloning or setup needed:
+
+```bash
+npx @muhammed_suhaib/student-management-system
+```
+or
+```bash
+pnpm dlx @muhammed_suhaib/student-management-system
+```
+
